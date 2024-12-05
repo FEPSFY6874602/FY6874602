@@ -149,9 +149,61 @@ the art of bowling remains a vital and fascinating aspect of cricket, essential 
 </p>        
    
     <img src="Swing Illustration.png" alt="Illustration of Air Flow Around a Cricket Ball" width="950.6" height="376.4">
+    
+     <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const WhatisswingandhowdoesitworkCount = displayWordCount("What is swing and how does it work_InText");
+    const WhydoesswingvaryCount = displayWordCount("Why does swing vary_InText");
+    const ConclusionCount = displayWordCount("Conclusion_InText");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount +  WhatisswingandhowdoesitworkCount + WhydoesswingvaryCount + ConclusionCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
+        
 
     <h3 id="References">References</h3>
+<p>
+    <pre>
+'<a href="https://www.smh.com.au/interactive/2019/rough-and-ready-the-art-and-science-of-reverse-swing/">'Baum, G. (2019). Rough and ready: the art and science of reverse swing in cricket.</a>' [Accessed 5 Dec. 2024].
+Cunningham, J. (2023). Cricket fielding positions: Explanation of all the confusing terms ahead of The Ashes... [online] talkSPORT. Available at: https://talksport.com/sport/1469700/cricket-fielding-positions-explained-ashes/ [Accessed 28 Nov. 2024].
+Emmerson, M. (2022). County Championship: Why are so many of this season’s balls going out of shape? BBC Sport. [online] 13 Jun. Available at: https://www.bbc.co.uk/sport/cricket/61712345 [Accessed 27 Nov. 2024].
+Gray-nicolls.co.uk. (2024). NEOCORE. [online] Available at: https://www.gray-nicolls.co.uk/pages/neocore [Accessed 25 Nov. 2024].
+Lemon, G. (2018). Caught on tape: the story behind Australian cricket’s greatest fall | Geoff Lemon. [online] the Guardian. Available at: https://www.theguardian.com/sport/2018/nov/14/caught-on-tape-the-story-behind-australian-crickets-greatest-fall [Accessed 3 Dec. 2024].
+Mehta, R. (2018). The science of swing bowling. [online] ESPNcricinfo. Available at: https://www.espncricinfo.com/story/rabindra-mehta-the-truth-behind-conventional-reverse-and-contrast-swing-1143037 [Accessed 5 Dec. 2024].
+Nag, U. (2022). LBW in cricket: Rules and history explained. [online] Olympics.com. Available at: https://olympics.com/en/news/what-is-lbw-cricket [Accessed 4 Dec. 2024].
+Roy, A. (2022). Reverse swing in cricket: What is it and how does it work. [online] Mpl Blog. Available at: https://www.mpl.live/blog/what-is-reverse-swing-in-cricket/ [Accessed 5 Dec. 2024].
+Scobie, J.A., Shelley, W.P., Jackson, R.W., Hughes, S.P. and Lock, G.D. (2019). Practical perspective of cricket ball swing. Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology, 234(1), pp.59–71. doi:https://doi.org/10.1177/1754337119872874.
+Shemilt, S. (2024). Pakistan vs England: Harry Brook & Joe Root set up victory charge. BBC Sport. [online] 10 Oct. Available at: https://www.bbc.co.uk/sport/cricket/articles/cy0g13djrd1o [Accessed 5 Dec. 2024].
+Weaver, P. (2008). New-look Trent Bridge can serve up a swinging time for England. [online] the Guardian. Available at: https://www.theguardian.com/sport/2008/jun/04/englandvnewzealand2008.englandcricketteam1 [Accessed 4 Dec. 2024].
+Woolmer, B. (2013). Treating the ball. [online] ESPNcricinfo. Available at: https://www.espncricinfo.com/story/treating-the-ball-607403 [Accessed 28 Nov. 2024].
 
+    </pre>
+</p>
+    
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
@@ -201,39 +253,4 @@ the art of bowling remains a vital and fascinating aspect of cricket, essential 
     window.onload = getLastUpdatedTime;
 </script>
 
-
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- Placeholder for total word count -->
-<p id="totalWordCount"></p>
-<hr>
-<script>
-  // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
-    // Get the text content from the specified section
-    const text = document.getElementById(sectionId).textContent;
-    // Split text into words based on spaces and filter out any empty strings
-    const wordArray = text.trim().split(/\s+/);
-    // Count the words
-    const wordCount = wordArray.length;
-    // Return the word count for summing purposes
-    return wordCount;
-  }
-  // Function to calculate and display total word count from selected sections
-  function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const WhatisswingandhowdoesitworkCount = displayWordCount("What is swing and how does it work_InText");
-    const WhydoesswingvaryCount = displayWordCount("Why does swing vary_InText");
-    const ConclusionCount = displayWordCount("Conclusion_InText");
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount +  WhatisswingandhowdoesitworkCount + WhydoesswingvaryCount + ConclusionCount;
-    // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-  }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
-</script>
-        
 </html>
