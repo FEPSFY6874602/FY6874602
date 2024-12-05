@@ -85,7 +85,7 @@ the competitive nature of the game. Understanding the mechanics of swing bowling
             </p>
       <h3 id="Introduction">Introduction</h3>
 <p>
-    <pre>
+    <pre id="Introduction_InText">
 The best bowlers possess a repertoire of deliveries to challenge batters. These include off cutters, where the bowler rolls their fingers down the side of the ball to slow it down and induce spin off the pitch, and
 short balls, which are pitched halfway down the pitch to bounce up towards the batter’s head. At the start of each innings, fast bowlers often aim to swing the ball, creating lateral movement in the air to make batting
 more difficult and increase their chances of taking wickets.
@@ -93,7 +93,7 @@ more difficult and increase their chances of taking wickets.
 </p>
     <h3 id="What is swing and how does it work?">What is swing and how does it work?</h3>
 <p></p>
-    <pre>
+    <pre id="What is swing and how does it work_InText">
 The most common form of lateral movement is outswing to a right-handed batter. This is created when the seam (the stitched part of the ball that joins two halves of leather encompassing a cork core) is pointed towards first 
 slip (a fielding position to the left of the keeper behind the stumps) and the rough side of the ball is on the side away from the batter (Scobie et al., 2019). This setup causes the ball to move away from the batter due to
 the turbulent airflow on the rough side, which slows the ball down and pulls it to the left, resulting in ‘outswing’. Bowlers aim to take wickets by finding the outside edge of the batter’s bat as the ball moves away from it. 
@@ -107,7 +107,7 @@ first (Nag, 2022). For left-handed batters, the terms ‘inswing’ and ‘outsw
 </p>
     <h3 id="Why does swing vary?">Why does swing vary?</h3>
 <p>
-    <pre>
+    <pre id="Why does swing vary_InText">
 As a cricket ball ages and is hit by the bat multiple times, it deteriorates, causing it to misshape and rough up each side. To create one shiny and one rough side (and therefore swing), players ‘shine’ the ball by rubbing the
 less rough side up and down their clothing. It has been found that sweat, saliva, and other illegal ball tampering methods such as sandpapering the rough side can be used to improve the swing of the ball (Scobie et al., 2019). 
 The most notorious example of illegal ball tampering was Sandpapergate in 2018 by Australia in the third test against South Africa, which resulted sanctions ranging from 12-month bans to never being allowed to take up leadership
@@ -134,7 +134,7 @@ performance in 1990 against New Zealand in Pakistan, where he used reverse swing
 </p>
      <h3 id="Conclusion">Conclusion</h3>
 <p>
-    <pre>
+    <pre id="Conclusion_InText">
 In conclusion, while cricket is often seen as a batter’s game due to the numerous advantages batters have, the skill and variety of deliveries that bowlers bring to the game are crucial in maintaining a competitive balance. 
 Understanding the mechanics of swing, both conventional and reverse, highlights the intricate strategies bowlers use to counteract the dominance of batters. Despite the challenges posed by modern equipment and pitch conditions, 
 the art of bowling remains a vital and fascinating aspect of cricket, essential for preserving the sport’s dynamic and competitive nature.
@@ -216,10 +216,12 @@ the art of bowling remains a vital and fascinating aspect of cricket, essential 
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction");
-    const WhatisswingandhowdoesitworkCount = displayWordCount("What is swing and how does it work?");
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const WhatisswingandhowdoesitworkCount = displayWordCount("What is swing and how does it work_InText");
+    const WhydoesswingvaryCount = displayWordCount("Why does swing vary_InText");
+    const ConclusionCount = displayWordCount("Conclusion_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount +  WhatisswingandhowdoesitworkCount;
+    const totalWordCount = IntroductionCount +  WhatisswingandhowdoesitworkCount + WhydoesswingvaryCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
