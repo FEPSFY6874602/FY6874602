@@ -8,7 +8,7 @@
       <h1><b>ENG0018  Computer  Laboratory 2024/25</b><h1>  
       <h2>Student URN:6874602</h2>
     <hr>
-    <h2 style=”font-family:calibri:”><b>Conference  paper:  Why Do Cricket Balls Swing</b></h2>
+    <h2 style=”font-family:calibri:”><b>Conference  paper:  Why Cricket Balls Swing: The Physics and Its Importance For The Sport</b></h2>
     <hr>
 
 <!style for tables>
@@ -54,15 +54,20 @@
     <th><h3></h3>Table of contents</h3></th>
 </tr>    
 <tr>
-    <td><a href="#What is swing and how does it work?">What is swing and how does it work?</td>
+    <td><a href="#Abstract">Abstract</td>
 </tr>
 <tr>
     <td><a href="#Introduction">Introduction</td>
 </tr>
 <tr>
-    <td><a href="#Analysis and Discussion">Analysis and Discussion</td>
+    <td><a href="#What is swing and how does it work?">What is swing and how does it work?</td>
 </tr>
-
+<tr>
+    <td><a href="#Why does swing vary?">Why does swing vary?</td>
+</tr>
+<tr>
+    <td><a href="#Conclusion">Conclusion</td>
+</tr>
 <tr>
     <td><a href="#References">References</td>
 </tr> 
@@ -135,7 +140,9 @@ Understanding the mechanics of swing, both conventional and reverse, highlights 
 the art of bowling remains a vital and fascinating aspect of cricket, essential for preserving the sport’s dynamic and competitive nature.
    </pre>
 </p>        
-        
+
+<h3 id="References">References</h3>
+    
     <img src="Swing Illustration.png" alt="Illustration of Air Flow Around a Cricket Ball" width="950.6" height="376.4">
 
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
@@ -209,10 +216,10 @@ the art of bowling remains a vital and fascinating aspect of cricket, essential 
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisandDiscussionCount = displayWordCount("AnalysisandDiscussion_InText");
+    const IntroductionCount = displayWordCount("Introduction");
+    const Whatisswingandhowdoesitwork?Count = displayWordCount("What is swing and how does it work?");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisandDiscussionCount;
+    const totalWordCount = IntroductionCount +  Whatisswingandhowdoesitwork?Count;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
